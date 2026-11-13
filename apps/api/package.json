@@ -1,15 +1,26 @@
 {
-  "name": "api",
-  "module": "index.ts",
-  "type": "module",
-  "private": true,
-  "scripts": {
-    "typecheck": "bun check"
-  },
-  "devDependencies": {
-    "@types/bun": "latest"
-  },
-  "peerDependencies": {
-    "typescript": "^7"
-  }
+	"name": "api",
+	"module": "index.ts",
+	"type": "module",
+	"private": true,
+	"scripts": {
+		"typecheck": "bun check",
+		"check-lint": "bunx biome check",
+		"lint": "bunx biome check --write",
+		"dev": "bun --hot run src/index.ts",
+		"bundle": "rm -rf dist/ && bun build ./src/index.ts --outdir dist",
+		"clear": "rm -rf dist",
+		"start": "bun run dist/index.js"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "2.6.7",
+		"@types/bun": "latest"
+	},
+	"peerDependencies": {
+		"typescript": "^7"
+	},
+	"dependencies": {
+		"hono": "^4.13.18",
+		"zod": "^4.6.7"
+	}
 }
