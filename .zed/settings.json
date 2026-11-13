@@ -1,3 +1,44 @@
 {
+  "show_whitespaces": "selection",
+  "indent_guides": { "enabled": true, "coloring": "indent_aware" },
+
+  // ── Editor behavior ─────────────────────────────────────────
+  "tab_size": 2,
+  "hard_tabs": false,
+  "preferred_line_length": 100,
+  "wrap_guides": [100],
+  "soft_wrap": "editor_width",
+  "ensure_final_newline_on_save": true,
+  "remove_trailing_whitespace_on_save": true,
+  "format_on_save": "on",
+  "use_autoclose": true,
+  "auto_indent_on_paste": true,
+
+  // ── Code intelligence ───────────────────────────────────────
+  "enable_language_server": true,
+  "inlay_hints": { "enabled": true },
+  "prettier": { "allowed": true },
+
+  // ── AI / privacy ────────────────────────────────────────────
   "disable_ai": true,
+
+  // ── Terminal ────────────────────────────────────────────────
+  "terminal": {
+    "working_directory": "current_project_directory",
+  },
+
+  // ── Performance: skip heavy folders ─────────────────────────
+  "file_scan_exclusions": [
+    "**/.git",
+    "**/node_modules",
+    "**/.next",
+    "**/dist",
+    "**/build",
+    "**/.turbo",
+    "**/__pycache__",
+    "**/.venv",
+    "**/.pytest_cache",
+    "**/.ruff_cache",
+    "**/.DS_Store",
+  ],
 }
