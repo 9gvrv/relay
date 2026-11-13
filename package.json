@@ -1,0 +1,22 @@
+{
+  "name": "relay",
+  "module": "index.ts",
+  "type": "module",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "typecheck": "bun check",
+    "dev": "bun run --parallel --filter '*' dev",
+    "dev: web": "bun run --filter '@relay/web' dev",
+    "dev: api": "bun run --filter '@relay/api' dev"
+  },
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^7"
+  }
+}
